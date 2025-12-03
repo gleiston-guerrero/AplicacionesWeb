@@ -1,0 +1,211 @@
+/* Establece un estilo base para todo el documento */
+* {
+  /* Aplica a todos los elementos HTML */
+  box-sizing: border-box;
+  /* Incluye bordes y rellenos dentro del ancho y alto total de los elementos */
+  margin: 0;
+  /* Elimina márgenes por defecto */
+  padding: 0;
+  /* Elimina rellenos por defecto */
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+  /* Define la tipografía por defecto */
+  font-family: Arial, Helvetica, sans-serif;
+  /* Elige una fuente sans-serif legible */
+  background-color: #f5f5f5;
+  /* Color de fondo claro para la página */
+  color: #333;
+  /* Color de texto principal oscuro */
+  padding: 20px;
+  /* Margen interno alrededor de todo el contenido */
+}
+
+/* Estilos para el encabezado principal */
+header {
+  /* Centra el contenido del encabezado */
+  text-align: center;
+  /* Añade espacio debajo del encabezado */
+  margin-bottom: 20px;
+}
+
+/* Estilo del título principal */
+header h1 {
+  /* Tamaño de fuente más grande para el título */
+  font-size: 2rem;
+  /* Añade un pequeño margen inferior */
+  margin-bottom: 10px;
+}
+
+/* Estilo del párrafo en el encabezado */
+header p {
+  /* Tamaño de letra ligeramente menor */
+  font-size: 1rem;
+  /* Color de texto más suave */
+  color: #555;
+}
+
+/* Estilo general para el contenido principal */
+main {
+  /* Limita el ancho máximo del contenido y lo centra */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Estilo genérico para cada sección del main */
+section {
+  /* Añade espacio interno dentro de cada sección */
+  padding: 15px;
+  /* Añade espacio externo debajo de cada sección */
+  margin-bottom: 20px;
+  /* Fondo blanco para destacar las secciones */
+  background-color: #ffffff;
+  /* Borde sutil alrededor de las secciones */
+  border: 1px solid #ddd;
+  /* Bordes ligeramente redondeados */
+  border-radius: 6px;
+}
+
+/* Estilo de los títulos de segundo nivel */
+section h2 {
+  /* Tamaño de fuente para los subtítulos */
+  font-size: 1.3rem;
+  /* Espacio inferior para separarlo del contenido */
+  margin-bottom: 10px;
+}
+
+/* Estilo para grupos de controles del formulario */
+.form-group {
+  /* Organiza el contenido de cada grupo en columna */
+  display: flex;
+  /* Los elementos se colocan uno debajo del otro en pantallas pequeñas */
+  flex-direction: column;
+  /* Espacio inferior entre grupos */
+  margin-bottom: 10px;
+}
+
+/* Estilo para etiquetas dentro del formulario */
+.form-group label {
+  /* Margen inferior para separar la etiqueta del campo */
+  margin-bottom: 4px;
+  /* Negrita para resaltar el texto de la etiqueta */
+  font-weight: bold;
+}
+
+/* Estilo para campos de entrada y selectores */
+.form-group input,
+.form-group select {
+  /* Padding interno para facilitar la lectura del texto */
+  padding: 6px 8px;
+  /* Borde sutil alrededor del campo */
+  border: 1px solid #ccc;
+  /* Bordes suavemente redondeados */
+  border-radius: 4px;
+}
+
+/* Estilo para la sección de botones del formulario */
+.form-actions {
+  /* Usa flexbox para organizar los botones */
+  display: flex;
+  /* Espacio horizontal entre los botones */
+  gap: 10px;
+  /* Margen superior para separarlos de los campos */
+  margin-top: 10px;
+}
+
+/* Estilo genérico para todos los botones */
+button {
+  /* Relleno interno para agrandar el área clicable */
+  padding: 8px 12px;
+  /* Elimina borde por defecto del botón */
+  border: none;
+  /* Bordes levemente redondeados */
+  border-radius: 4px;
+  /* Color de fondo principal del botón */
+  background-color: #1976d2;
+  /* Color del texto del botón en blanco */
+  color: #ffffff;
+  /* Cursor en forma de mano al pasar sobre el botón */
+  cursor: pointer;
+  /* Tamaño de fuente estándar para el botón */
+  font-size: 0.95rem;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+  /* Cambia ligeramente el color del fondo para dar feedback visual */
+  background-color: #115293;
+}
+
+/* Estilos específicos para contenedores de filtros y búsqueda */
+.filters,
+.search {
+  /* Usa flexbox para alinear elementos en fila */
+  display: flex;
+  /* Permite que los elementos se envuelvan si no hay espacio horizontal */
+  flex-wrap: wrap;
+  /* Espacio entre los elementos internos */
+  gap: 10px;
+  /* Margen inferior para separar del contenido siguiente */
+  margin-bottom: 10px;
+  /* Alinea verticalmente los elementos al centro */
+  align-items: center;
+}
+
+/* Estilos para el campo de búsqueda */
+.search input {
+  /* Ancho mínimo para que sea cómodo escribir */
+  min-width: 200px;
+}
+
+/* Estilos para la tabla de datos */
+table {
+  /* Ocupa todo el ancho disponible de su contenedor */
+  width: 100%;
+  /* Colapsa los bordes de las celdas para una apariencia más limpia */
+  border-collapse: collapse;
+}
+
+/* Estilos para las celdas del encabezado y del cuerpo */
+th,
+td {
+  /* Borde sutil alrededor de cada celda */
+  border: 1px solid #ddd;
+  /* Espacio interno para separar el texto del borde */
+  padding: 8px;
+  /* Alinea el texto a la izquierda por defecto */
+  text-align: left;
+}
+
+/* Estilo específico para el encabezado de la tabla */
+th {
+  /* Color de fondo diferente para destacar el encabezado */
+  background-color: #e3f2fd;
+  /* Negrita en los textos del encabezado */
+  font-weight: bold;
+}
+
+/* Estilo alternado para las filas del cuerpo de la tabla */
+tbody tr:nth-child(even) {
+  /* Color de fondo diferente para filas pares */
+  background-color: #f9f9f9;
+}
+
+/* Estilo del panel de estadísticas */
+#statsPanel {
+  /* Muestra el texto usando una fuente monoespaciada */
+  font-family: "Courier New", Courier, monospace;
+  /* Mantiene un alto mínimo para que el panel sea visible aunque no haya datos */
+  min-height: 120px;
+  /* Añade espacio interno para mejorar legibilidad */
+  padding: 10px;
+  /* Borde sutil para delimitar el panel */
+  border: 1px solid #ddd;
+  /* Bordes redondeados */
+  border-radius: 4px;
+  /* Fondo ligeramente gris para diferenciar del resto */
+  background-color: #fafafa;
+  /* Permite desplazamiento vertical si el contenido excede el alto */
+  overflow-y: auto;
+}

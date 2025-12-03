@@ -1,0 +1,151 @@
+<!doctype html>
+<!--
+<!doctype html> indica que este documento usa la versión HTML5 del lenguaje.
+El DOCTYPE no es una etiqueta HTML, sino una declaración obligatoria que
+informa al navegador cómo debe interpretar la sintaxis del documento.
+-->
+
+<html class="no-js" lang="">
+<!--
+<html> es la etiqueta raíz del documento HTML; engloba todo el contenido.
+El atributo "class" aquí tiene el valor "no-js", que se usa comúnmente en
+HTML5 Boilerplate para indicar que JavaScript está deshabilitado.
+Luego, un script cambiará esta clase a "js" si JavaScript está activo.
+El atributo "lang" define el idioma principal del contenido.
+Debe contener un código como "es" para español o "en" para inglés.
+-->
+
+<head>
+  <!--
+  <head> contiene metadatos del documento, enlaces a recursos externos
+  (hojas de estilo, íconos, scripts), y configuraciones que no se muestran
+  directamente en la página.
+  -->
+
+  <meta charset="utf-8">
+  <!--
+  <meta charset="utf-8"> especifica la codificación de caracteres UTF-8,
+  que permite mostrar correctamente letras acentuadas, eñes y otros símbolos.
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+  Esta etiqueta controla cómo se adapta la página en dispositivos móviles.
+  - "width=device-width" hace que el ancho del sitio se ajuste al ancho del dispositivo.
+  - "initial-scale=1" establece el nivel de zoom inicial.
+  Es esencial para diseño responsivo.
+  -->
+
+  <title></title>
+  <!--
+  <title> define el título que aparece en la pestaña del navegador o al marcar la página.
+  Se recomienda siempre incluir un texto descriptivo dentro.
+  -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <!--
+  <link> enlaza un recurso externo.
+  - "rel='stylesheet'" indica que el recurso es una hoja de estilos CSS.
+  - "href='css/style.css'" especifica la ruta al archivo CSS que define el diseño visual.
+  -->
+
+  <meta name="description" content="">
+  <!--
+  Esta metaetiqueta define una breve descripción del sitio o página web.
+  Es usada por motores de búsqueda (SEO) para mostrar resúmenes en los resultados.
+  El atributo "content" debe contener una frase descriptiva del sitio.
+  -->
+
+  <!-- Etiquetas Open Graph (para compartir en redes sociales) -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+  <!--
+  Estas etiquetas <meta property="og:..."> pertenecen al protocolo Open Graph (OG),
+  que permite controlar cómo se muestra el contenido cuando se comparte en redes sociales
+  como Facebook, Twitter o LinkedIn.
+  - og:title → título de la página.
+    <meta property="og:title" content="Proyecto IoT Educativo - Aprendizaje Interactivo en Línea">
+  - og:type → tipo de contenido (por ejemplo, "website" o "article").
+    <meta property="og:type" content="website">
+  - og:url → URL canónica de la página.
+    <meta property="og:url" content="https://www.ejemploeducativo.com/proyecto-iot">
+  - og:image → imagen que se mostrará en la previsualización.
+    <meta property="og:image" content="https://www.ejemploeducativo.com/img/portada-iot.jpg">
+  - og:image:alt → texto alternativo de esa imagen.
+    <meta property="og:image:alt" content="Ilustración del proyecto IoT para el aprendizaje en línea">
+  -->
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <!--
+  Define el ícono del sitio (favicon).
+  - "rel='icon'" indica su función.
+  - "href" especifica la ruta al archivo (favicon.ico).
+  - "sizes='any'" indica que puede adaptarse a cualquier tamaño.
+  -->
+
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <!--
+  Versión alternativa del ícono en formato SVG.
+  - "type='image/svg+xml'" informa al navegador el tipo MIME del recurso.
+  Esto permite usar íconos escalables y ligeros.
+  -->
+
+  <link rel="apple-touch-icon" href="icon.png">
+  <!--
+  Define el ícono que se mostrará cuando un usuario guarde la web como acceso directo
+  en dispositivos Apple (iPhone/iPad).
+  El atributo "href" apunta a la imagen en formato PNG.
+  -->
+
+  <link rel="manifest" href="site.webmanifest">
+  <!--
+  Conecta el archivo "manifest" (site.webmanifest), que describe metadatos de la aplicación
+  web progresiva (PWA): nombre, íconos, colores, comportamiento offline, etc.
+  Es fundamental para hacer que una web funcione como una app instalada.
+  -->
+
+  <meta name="theme-color" content="#fafafa">
+  <!--
+  Define el color de tema del navegador o la barra de estado en móviles.
+  "#fafafa" es un tono claro. Mejora la integración visual en Android y navegadores modernos.
+  -->
+
+</head>
+
+<body>
+<!--
+<body> contiene todo el contenido visible para el usuario: texto, imágenes, botones, etc.
+-->
+
+<!-- Add your site or application content here -->
+<!--
+Este es un comentario dentro del HTML (no se muestra al usuario).
+Sirve para indicar al desarrollador dónde colocar el contenido principal del sitio.
+-->
+
+<p>Hello world! This is HTML5 Boilerplate.</p>
+<!--
+<p> representa un párrafo de texto.
+Aquí simplemente muestra un mensaje de ejemplo.
+-->
+
+<h1>Gestión de Producto con Objetos en JavaScript</h1>
+<p>Para ver los resultados debe abrir la consola del navegador (Ctrl + Shift + I → Consola).</p>
+
+<script src="js/app.js"></script>
+<!--
+<script> enlaza un archivo JavaScript externo.
+- "src='js/app.js'" especifica la ubicación del script.
+Este archivo contiene la lógica o comportamiento dinámico del sitio.
+-->
+
+</body>
+
+</html>
+<!--
+Etiqueta de cierre del documento HTML.
+Marca el final del contenido del archivo.
+-->

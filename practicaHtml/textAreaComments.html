@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acceder al contenido de un textarea</title>
+  <style>
+    textarea {
+      width: 300px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Ejemplo: Leer contenido del textarea</h2>
+
+<textarea id="comentario" placeholder="Escribe tu comentario aquí..."></textarea><br>
+<button onclick="leerComentario()">Mostrar comentario</button>
+
+<p id="resultado"></p>
+
+<script>
+  function leerComentario() {
+    // Accede al contenido usando .value
+    const texto = document.getElementById("comentario").value;
+    document.getElementById("resultado").textContent = "Texto ingresado: " + texto;
+  }
+</script>
+
+</body>
+</html>

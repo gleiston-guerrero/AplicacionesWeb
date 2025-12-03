@@ -1,0 +1,8 @@
+create or replace procedure pr_sales()
+language plpgsql    
+as $$
+begin
+    update sale set enabled = true;
+end;$$
+
+call pr_sales();

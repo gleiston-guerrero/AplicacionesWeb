@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento HTML5 -->
+
+<html lang="es">
+<!-- Raíz del documento HTML, con el idioma configurado a español -->
+
+<head>
+  <!-- Cabecera del documento, contiene metadatos y enlaces a recursos externos -->
+
+  <meta charset="UTF-8">
+  <!-- Se establece la codificación de caracteres a UTF-8 para soportar caracteres especiales -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que el diseño sea responsivo ajustando el ancho al dispositivo -->
+
+  <title>Gestión de Estudiantes - CRUD con Arreglos</title>
+  <!-- Título que se mostrará en la pestaña del navegador -->
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Enlace al archivo de estilos externo donde se define la apariencia visual -->
+</head>
+
+<body>
+<!-- Cuerpo del documento, donde se muestra el contenido visible de la página -->
+
+<header>
+  <!-- Encabezado principal de la página -->
+
+  <h1>Gestión de Estudiantes</h1>
+  <!-- Título principal de la aplicación web -->
+
+  <p>Aplicación CRUD avanzada usando arreglos y funciones modernas de JavaScript.</p>
+  <!-- Descripción breve del propósito de la aplicación -->
+</header>
+
+<main>
+  <!-- Contenedor principal del contenido de la página -->
+
+  <section id="form-section">
+    <!-- Sección que contiene el formulario para crear y editar estudiantes -->
+
+    <h2>Registro de estudiante</h2>
+    <!-- Subtítulo de la sección del formulario -->
+
+    <form id="studentForm">
+      <!-- Formulario con identificador para capturarlo desde JavaScript -->
+
+      <input type="hidden" id="editIndex">
+      <!-- Campo oculto que almacena el índice del estudiante en edición (si lo hay) -->
+
+      <div class="form-group">
+        <!-- Contenedor para un grupo de controles relacionados del formulario -->
+
+        <label for="name">Nombre:</label>
+        <!-- Etiqueta para el campo de texto del nombre del estudiante -->
+
+        <input type="text" id="name" required>
+        <!-- Campo de entrada de texto para el nombre, obligatorio -->
+      </div>
+
+      <div class="form-group">
+        <!-- Segundo grupo de controles del formulario -->
+
+        <label for="age">Edad:</label>
+        <!-- Etiqueta para el campo de edad del estudiante -->
+
+        <input type="number" id="age" min="0" required>
+        <!-- Campo numérico para la edad, con mínimo 0 y obligatorio -->
+      </div>
+
+      <div class="form-group">
+        <!-- Tercer grupo de controles del formulario -->
+
+        <label for="gender">Género:</label>
+        <!-- Etiqueta para el campo de selección del género -->
+
+        <select id="gender" required>
+          <!-- Lista desplegable para seleccionar el género, obligatoria -->
+
+          <option value="">Seleccione...</option>
+          <!-- Opción por defecto que invita a seleccionar un valor -->
+
+          <option value="F">Femenino</option>
+          <!-- Opción para género femenino -->
+
+          <option value="M">Masculino</option>
+          <!-- Opción para género masculino -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <!-- Cuarto grupo de controles del formulario -->
+
+        <label for="courses">Número de cursos inscritos:</label>
+        <!-- Etiqueta para el número de cursos -->
+
+        <input type="number" id="courses" min="0" required>
+        <!-- Campo numérico para capturar el número de cursos, mínimo 0 y obligatorio -->
+      </div>
+
+      <div class="form-group">
+        <!-- Quinto grupo de controles del formulario -->
+
+        <label for="payment">Valor de pago:</label>
+        <!-- Etiqueta para el valor del pago -->
+
+        <input type="number" id="payment" min="0" step="0.01" required>
+        <!-- Campo numérico para el pago, mínimo 0, con decimales y obligatorio -->
+      </div>
+
+      <div class="form-actions">
+        <!-- Contenedor para los botones principales del formulario -->
+
+        <button type="submit" id="saveButton">Guardar</button>
+        <!-- Botón de envío del formulario para crear o actualizar estudiante -->
+
+        <button type="button" id="clearButton">Limpiar</button>
+        <!-- Botón que limpia el formulario sin enviarlo -->
+      </div>
+    </form>
+  </section>
+
+  <section id="filter-section">
+    <!-- Sección para filtros y búsquedas sobre la lista de estudiantes -->
+
+    <h2>Filtros y búsqueda</h2>
+    <!-- Encabezado de la sección de filtros -->
+
+    <div class="filters">
+      <!-- Contenedor para controles de filtrado por género -->
+
+      <button type="button" id="filterAll">Mostrar todos</button>
+      <!-- Botón para mostrar todos los estudiantes sin filtro -->
+
+      <button type="button" id="filterFemale">Solo femeninas</button>
+      <!-- Botón para filtrar y mostrar solo estudiantes de género femenino -->
+
+      <button type="button" id="filterMale">Solo masculinos</button>
+      <!-- Botón para filtrar y mostrar solo estudiantes de género masculino -->
+    </div>
+
+    <div class="search">
+      <!-- Contenedor para el buscador por nombre -->
+
+      <label for="searchName">Buscar por nombre:</label>
+      <!-- Etiqueta del campo de búsqueda -->
+
+      <input type="text" id="searchName" placeholder="Escriba el nombre a buscar">
+      <!-- Campo de texto para introducir el nombre o parte del nombre a buscar -->
+
+      <button type="button" id="searchButton">Buscar</button>
+      <!-- Botón que activa la búsqueda aplicando includes + filter -->
+
+      <button type="button" id="clearSearchButton">Limpiar búsqueda</button>
+      <!-- Botón que limpia el campo de búsqueda y restaura la lista original -->
+    </div>
+  </section>
+
+  <section id="table-section">
+    <!-- Sección que contiene la tabla dinámica de estudiantes -->
+
+    <h2>Listado de estudiantes</h2>
+    <!-- Encabezado de la sección de la tabla -->
+
+    <table>
+      <!-- Tabla HTML donde se mostrarán los estudiantes dinámicamente -->
+
+      <thead>
+      <!-- Encabezado de la tabla con los nombres de las columnas -->
+
+      <tr>
+        <!-- Fila de encabezados de la tabla -->
+
+        <th>#</th>
+        <!-- Columna para el número de fila -->
+
+        <th>Nombre</th>
+        <!-- Columna para el nombre del estudiante -->
+
+        <th>Edad</th>
+        <!-- Columna para la edad del estudiante -->
+
+        <th>Género</th>
+        <!-- Columna para el género del estudiante -->
+
+        <th>Cursos</th>
+        <!-- Columna para el número de cursos inscritos -->
+
+        <th>Pago</th>
+        <!-- Columna para el valor de pago -->
+
+        <th>Acciones</th>
+        <!-- Columna para botones de editar y eliminar -->
+      </tr>
+      </thead>
+
+      <tbody id="studentsTableBody">
+      <!-- Cuerpo de la tabla donde JavaScript insertará las filas dinámicamente -->
+      </tbody>
+    </table>
+  </section>
+
+  <section id="stats-section">
+    <!-- Sección donde se mostrarán las estadísticas generadas con métodos de arreglos -->
+
+    <h2>Estadísticas avanzadas</h2>
+    <!-- Encabezado de la sección de estadísticas -->
+
+    <pre id="statsPanel">
+      <!-- Elemento preformateado para mostrar texto de estadísticas de manera legible -->
+      </pre>
+  </section>
+</main>
+
+<script src="app.js"></script>
+<!-- Enlace al archivo JavaScript que contiene toda la lógica de la aplicación -->
+</body>
+
+</html>
+<!-- Fin del documento HTML -->

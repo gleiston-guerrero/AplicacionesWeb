@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modificar contenido de un div</title>
+  <style>
+    #caja {
+      padding: 15px;
+      background-color: lightblue;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Modificar el contenido de un div</h2>
+<form>
+  <label for="reunion">Fecha y hora de la reunión:</label>
+  <input type="datetime-local" id="reunion" name="reunion">
+</form>
+<div id="caja">Este es el contenido original</div>
+
+<button onclick="usarTextContent()">Modificar con textContent</button>
+<button onclick="usarInnerHTML()">Modificar con innerHTML</button>
+
+<script>
+  const caja = document.getElementById("caja");
+
+  function usarTextContent() {
+    caja.textContent = "<strong>Nuevo contenido con textContent</strong>";
+  }
+
+  function usarInnerHTML() {
+    caja.innerHTML = "<strong>Nuevo contenido con innerHTML</strong>";
+  }
+</script>
+
+</body>
+</html>

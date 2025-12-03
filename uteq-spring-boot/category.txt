@@ -1,0 +1,32 @@
+[
+    {
+        "idCategory": 1,
+        "name": "Computer",
+        "description": "Some computers",
+        "enabled": true
+    },
+    {
+        "idCategory": 2,
+        "name": "Smartphone",
+        "description": "Some Smartphones",
+        "enabled": true
+    },
+    {
+        "idCategory": 5,
+        "name": "Smartwatch",
+        "description": "Some Smartwatches",
+        "enabled": true
+    },
+    {
+        "idCategory": 6,
+        "name": "Smartwallet",
+        "description": "Some Smartwallets",
+        "enabled": true
+    },
+    {
+        "idCategory": 7,
+        "name": "Smartshoes",
+        "description": "Some Smartshoes",
+        "enabled": true
+    }
+]

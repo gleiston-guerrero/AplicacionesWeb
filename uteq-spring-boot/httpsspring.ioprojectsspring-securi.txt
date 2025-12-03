@@ -1,0 +1,17 @@
+https://spring.io/projects/spring-security
+Verificar la compatibilidad entre security y el Boot
+1. Agregar la dependencia spring-boot-starter-security
+Al acceder a algún recurso pide usuario y contraseña.
+User: user
+Clave: la generada en la consola
+
+
+Otras dependencias para JWT para generar el token
+jjwt-api
+jjwt-impl
+jjwt-jackson
+
+
+2. paquete security
+2.1. clase utilitaria: JwtTokenUtil
+generar el String jwt

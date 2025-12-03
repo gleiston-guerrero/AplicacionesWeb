@@ -1,0 +1,15 @@
+{
+    "client": {
+        "idClient" : 1
+    },
+    "user" : {
+        "idUser" : 1
+    },
+    "datetime": "2023-11-06T19:45:30",
+    "total": 79.99,
+    "tax": 14.39,
+    "enabled": true,
+    "details": [
+        { "product": { "idProduct": 3}, "quantity": 1, "salePrice": 79.99, "discount": 0 }        
+    ]
+}

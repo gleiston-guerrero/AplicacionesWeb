@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- Encabezado de la página. Encierra los elementos informativos no visibles para el usuario. Los más importantes
+    los datos meta o metadatos -->
+    <head>
+        <!-- Codificación de caracteres -->
+        <meta charset="UTF-8">
+
+        <!-- Compatibilidad con Internet Explorer y Edge -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Escalado y adaptabilidad en dispositivos móviles -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Título de la página, también puede ir en <title> -->
+        <title>
+            Gestión de categorías (Otro título)
+        </title>
+
+        <!-- Título de la página, también puede ir en <title> -->
+        <meta name="title" content="Gestión de categorías">
+
+        <!-- Descripción que aparece en resultados de búsqueda -->
+        <meta name="description" content="Descripción breve y precisa de la aplicación web.">
+
+        <!-- Palabras clave para SEO (cada vez menos usado por Google) -->
+        <meta name="keywords" content="web, app, tecnología, responsive, moderno, progresivo">
+
+        <!-- Nombre del autor del sitio -->
+        <meta name="author" content="Gleiston Guerrero - UTEQ">
+
+        <!-- Instrucciones para los motores de búsqueda -->
+        <meta name="robots" content="index, follow">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body class="bg-light">
+    <!-- El atributo class="bg-light" aplica un fondo claro al cuerpo de la página, usando clases de Bootstrap. -->
+
+        <div class="container mt-5">
+        <!-- Contenedor principal con margen superior (mt-5). Centra y limita el ancho del contenido. -->
+
+            <h2 class="text-center mb-4">Gestión de Categorías</h2>
+            <!-- Título centrado de segundo nivel con margen inferior (mb-4). Indica la funcionalidad principal de la página. -->
+
+            <!-- Formulario para Crear/Editar -->
+            <div class="card mb-4">
+            <!-- Tarjeta Bootstrap que encapsula visualmente el formulario. -->
+
+                <div class="card-header">Formulario de Categorías</div>
+                <!-- Encabezado de la tarjeta, sirve como título del formulario. -->
+
+                <div class="card-body">
+                <!-- Cuerpo del formulario, donde se ubican los campos y botones. -->
+                    <form id="categoryForm"> <!-- method="get" -->
+                    <!-- Formulario con ID único, usado por JavaScript para manipulación y envío de datos. -->
+
+                        <input type="hidden" id="categoryId">
+                        <!-- Campo oculto que almacena el ID de la categoría en caso de edición.
+                             Si está vacío, el formulario se usará para crear una nueva categoría. -->
+
+                        <div class="mb-3">
+                        <!-- Grupo de formulario con margen inferior. -->
+
+                            <label for="name" class="form-label">Nombre</label>
+                            <!-- Etiqueta asociada al campo de nombre. Mejora la accesibilidad. -->
+
+                            <input type="text" class="form-control" id="name" required>
+                            <!-- Campo de entrada de texto para el nombre de la categoría.
+                                 Tiene clase Bootstrap para estilo y el atributo "required" obliga a completarlo. -->
+                        </div>
+
+                        <div class="mb-3"> <!-- Segundo grupo del formulario. -->
+                            <label for="description" class="form-label">Descripción</label>
+                            <!-- Etiqueta para el campo de descripción. -->
+
+                            <input type="text" class="form-control" id="description">
+                            <!-- Campo de texto para la descripción de la categoría. No es obligatorio. -->
+                        </div>
+
+                        <div class="mb-3 form-check"> <!-- Grupo que contiene un checkbox con estilo Bootstrap. -->
+                            <input type="checkbox" class="form-check-input" id="enabled">
+                            <!-- Casilla de verificación que indica si la categoría está activa o habilitada. -->
+
+                            <label class="form-check-label" for="enabled">¿Activa?</label>
+                            <!-- Etiqueta asociada al checkbox. La pregunta orienta al usuario sobre el estado de la categoría. -->
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <!-- Botón principal del formulario. Al hacer clic envía los datos. Su tipo "submit" lo activa como disparador del evento. -->
+
+                        <button type="reset" class="btn btn-secondary">Limpiar</button>
+                        <!-- Botón que restablece (vacía) todos los campos del formulario al estado inicial. -->
+                    </form>
+                </div>
+            </div>
+
+            <!-- Tabla de Categorías -->
+            <table class="table table-bordered table-striped">
+                <!-- Tabla con estilos de Bootstrap:
+                     - 'table': aplica formato general de tabla,
+                     - 'table-bordered': agrega bordes a las celdas,
+                     - 'table-striped': alterna el color de las filas para mejor lectura. -->
+
+                <thead class="table-dark"> <!-- Encabezado de la tabla con fondo oscuro y texto claro. -->
+                    <tr> <!-- Fila de encabezados. -->
+                        <th>ID</th> <!-- Columna para el identificador único de la categoría. -->
+                        <th>Nombre</th> <!-- Columna para el nombre de la categoría. -->
+                        <th>Descripción</th> <!-- Columna para la descripción de la categoría. -->
+                        <th>Estado</th> <!-- Columna que indica si la categoría está activa (Sí/No). -->
+                        <th>Acciones</th> <!-- Columna con botones de acción: editar y eliminar. -->
+                    </tr>
+                </thead>
+
+                <tbody id="categoryTableBody">
+                <!-- Cuerpo de la tabla donde se insertarán dinámicamente las filas con datos de categorías.
+                     Este ID es usado por JavaScript para insertar las filas generadas en tiempo de ejecución. -->
+                <!-- Filas generadas dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Bootstrap JS + Fetch API logic -->
+        <script>
+            // Define la URL base para las peticiones al backend de categorías.
+            // Cambia esto si usas una ruta como "/api/v1/categories" en el backend.
+            const apiUrl = '/categories'; // Constante que almacena el endpoint de la API REST para acceder a las categorías.
+
+            // Al cargar completamente la página, se invoca automáticamente la función que lista las categorías.
+            window.onload = fetchCategories;
+            // 'window.onload' es un evento que se dispara cuando toda la página (DOM, estilos, imágenes) ha sido completamente cargada.
+
+            // Función que obtiene las categorías del backend y las muestra en la tabla.
+            function fetchCategories() {
+                // Se realiza una petición HTTP GET al endpoint de categorías usando la API Fetch.
+                fetch(apiUrl) // 'fetch' es una función integrada en JavaScript que permite hacer solicitudes HTTP asíncronas.
+                    // Se transforma la respuesta a formato JSON.
+                    .then(res => res.json()) // 'res.json()' convierte la respuesta HTTP en un objeto JavaScript usable.
+                    .then(data => {
+                        // Se accede al cuerpo de la tabla donde se mostrarán los datos.
+                        const tbody = document.getElementById("categoryTableBody");
+                        // 'document.getElementById' obtiene el elemento HTML con ID 'categoryTableBody'.
+
+                        // Se limpia el contenido anterior para evitar duplicaciones.
+                        tbody.innerHTML = ''; // 'innerHTML' permite modificar el contenido HTML interno de un elemento.
+
+                        // Itera sobre cada categoría recibida y crea dinámicamente una fila HTML.
+                        data.forEach(cat => { // 'forEach' es un método de los arrays que ejecuta una función para cada elemento.
+                            const row = `<tr>
+                            <td>${cat.idCategory}</td>        <!-- Muestra el ID de la categoría -->
+                            <td>${cat.nameofCategory}</td>    <!-- Muestra el nombre -->
+                            <td>${cat.descriptionCategory}</td> <!-- Muestra la descripción -->
+                            <td>${cat.enabledCategory ? 'Sí' : 'No'}</td> <!-- Indica si está habilitada o no -->
+                            <td>
+                                <!-- Botón que permite cargar los datos al formulario para editar -->
+                                <button class="btn btn-sm btn-warning" onclick='editCategory(${JSON.stringify(cat)})'>Editar</button>
+                                <!-- Botón que permite eliminar la categoría -->
+                                <button class="btn btn-sm btn-danger" onclick="deleteCategory(${cat.idCategory})">Eliminar</button>
+                            </td>
+                        </tr>`;
+                            // Se agrega la fila recién creada al cuerpo de la tabla.
+                            tbody.innerHTML += row;
+                        });
+                    });
+            }
+
+            // Agrega un "listener" al formulario para manejar el evento de envío de datos.
+            document.getElementById("categoryForm").addEventListener("submit", function (e) {
+                // Previene que el formulario recargue la página (comportamiento por defecto del botón submit).
+                e.preventDefault();
+
+                // Obtiene el ID actual del campo oculto, si existe.
+                const id = document.getElementById("categoryId").value;
+                // Campo oculto que indica si se trata de una edición.
+
+                // Construye el objeto categoría con los datos del formulario.
+                const categoryDTO = {
+                    idCategory: id, //Asigne el idCategoría si existe (es un update)
+                    nameofCategory: document.getElementById("name").value, // Obtiene el valor del input con ID 'name'.
+                    descriptionCategory: document.getElementById("description").value, // Obtiene la descripción.
+                    enabledCategory: document.getElementById("enabled").checked // 'checked' devuelve true si el checkbox está marcado.
+                };
+
+                // Define si se usará PUT (actualización) o POST (creación) según si hay ID.
+                const method = id ? 'PUT' : 'POST'; // Condicional ternario: si hay ID, actualiza, si no, crea.
+
+                // Define la URL según la operación: con ID para PUT, sin ID para POST.
+                const url = id ? `${apiUrl}/${id}` : apiUrl; // Template literal: construye la URL completa para PUT.
+
+                // Realiza la petición al backend usando fetch.
+                fetch(url, {
+                    method: method, // Método HTTP apropiado según operación (POST o PUT).
+                    headers: { 'Content-Type': 'application/json' }, // Define el tipo de contenido que se envía.
+                    body: JSON.stringify(categoryDTO) // Convierte el objeto categoría a JSON para enviarlo.
+                }).then(() => {
+                    // Una vez que el servidor responde, se recarga la tabla para reflejar los cambios.
+                    fetchCategories(); // Refresca la lista de categorías.
+                    // Se reinicia el formulario para limpiar los campos.
+                    document.getElementById("categoryForm").reset(); // Limpia todos los campos del formulario.
+                });
+            });
+
+            // Función que carga los datos de una categoría al formulario para editarla.
+            function editCategory(cat) {
+                // Llena cada campo del formulario con los valores del objeto recibido.
+                document.getElementById('categoryId').value = cat.idCategory; // Asigna el ID (en campo oculto).
+                document.getElementById("name").value = cat.nameofCategory; // Asigna el nombre.
+                document.getElementById("description").value = cat.descriptionCategory; // Asigna la descripción.
+                document.getElementById("enabled").checked = cat.enabledCategory; // Marca o desmarca el checkbox según el estado.
+            }
+
+            // Función que elimina una categoría por su ID.
+            function deleteCategory(id) {
+                // Se solicita confirmación al usuario antes de eliminar.
+                if (confirm("¿Estás seguro de eliminar esta categoría?")) { // 'confirm' muestra un cuadro de diálogo de confirmación (OK / Cancelar).
+                    // Se hace una petición DELETE al endpoint de la categoría correspondiente.
+                    fetch(`${apiUrl}/${id}`, { method: 'DELETE' }) // Realiza la eliminación de la categoría.
+                        .then(() => fetchCategories()); // Luego, recarga la lista de categorías.
+                }
+            }
+        </script>
+    </body>
+</html>

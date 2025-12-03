@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practicar la herencia en JavaScript</title>
+  <link rel="stylesheet" href="./css/practica5.css" />
+</head>
+<body>
+<main class="container">
+  <h1>Practicar la herencia</h1>
+
+  <section class="card">
+    <h2>Formulario Persona / Estudiante</h2>
+    <form id="personaForm" novalidate>
+      <!-- Nombre -->
+      <div class="form-group">
+        <label for="nombre">Nombre <span class="required">*</span></label>
+        <input type="text" id="nombre" name="nombre" minlength="2" autocomplete="name"
+               placeholder="Ej. Gle Gue" required/>
+      </div>
+
+      <!-- Edad -->
+      <div class="form-group">
+        <label for="edad">Edad <span class="required">*</span></label>
+        <input type="number" id="edad" name="edad" min="1" max="120" step="1" required/>
+      </div>
+
+      <!-- Rol: estudiante o docente -->
+      <fieldset class="form-group">
+        <legend>Rol <span class="required">*</span></legend>
+        <label class="inline">
+          <input type="radio" name="rol" value="estudiante" id="rolEstudiante" required/>
+          Estudiante
+        </label>
+        <label class="inline">
+          <input type="radio" name="rol" value="docente" id="rolDocente"/>
+          Docente
+        </label>
+      </fieldset>
+
+      <!-- Matrícula (solo estudiantes) -->
+      <div class="form-group" id="matriculaGroup" hidden>
+        <label for="matricula">
+          Matrícula (3–10 caracteres alfanuméricos) <span class="required">*</span>
+        </label>
+        <input type="text" id="matricula" name="matricula" minlength="3" maxlength="10"
+               autocomplete="off" placeholder="Ej. A123"/>
+      </div>
+
+      <!-- Botones -->
+      <div class="form-actions">
+        <button type="submit" id="btnAgregar">Agregar a la tabla</button>
+        <button type="reset" id="btnLimpiar">Limpiar</button>
+      </div>
+
+      <!-- Mensajes de error -->
+      <!-- aria-live: Indica a las tecnologías de asistencia (como lectores de pantalla) cómo deben anunciar
+      los cambios dinámicos que ocurren dentro de un elemento sin que el usuario pierda el contexto-->
+      <div id="errores" class="errores" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <section class="card">
+    <!--Subtítulo, o título nivel 2-->
+    <h2>Listado de Personas</h2>
+    <div class="table-wrapper">
+      <table id="personasTable">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Rol</th>
+          <th>Matrícula</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Las filas se generan dinámicamente con JavaScript
+             Inicialmente ninguna-->
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="./js/practica5.js"></script>
+</body>
+</html>

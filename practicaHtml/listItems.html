@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recorrer elementos con clase item</title>
+  <style>
+    .item {
+      padding: 10px;
+      margin: 5px;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+
+<h3>Elementos con clase "item"</h3>
+
+<div class="item">Elemento 1</div>
+<div class="item">Elemento 2</div>
+<div class="item">Elemento 3</div>
+
+<button onclick="resaltarItems()">Resaltar items</button>
+
+<script>
+  function resaltarItems() {
+    // Selecciona todos los elementos con la clase "item"
+    const items = document.querySelectorAll(".item");
+
+    // Recorre y modifica cada uno
+    items.forEach((elemento, indice) => {
+      elemento.style.backgroundColor = "lightgreen";
+      elemento.textContent = `Elemento ${indice + 1} - resaltado`;
+    });
+  }
+</script>
+
+</body>
+</html>

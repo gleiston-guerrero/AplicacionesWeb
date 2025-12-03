@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="718a520a-cac0-43bc-826a-48abc570f8a8" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/mitocode/model/IngressDetail.java" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2yw0eHCtfOEDhxIcHj9C0raelhD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.CategoryControllerTest.deleteErrorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryControllerTest.deleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryControllerTest.findAllTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryControllerTest.findByIdTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryControllerTest.saveTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryControllerTest.updateErrorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryControllerTest.updateTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryServiceTest.deleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryServiceTest.findAllTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryServiceTest.findByIdTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoryServiceTest.saveTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mito-sales [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mito-sales [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;Database connection parameters found&quot;,
+    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MitoSalesApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.MitoSalesProd.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MitoSalesQA.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.UteqSalesApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.uteq-sales.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Repositorios/JavaMaven/uteq-sales-security&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MitoCode Network\Cursos\Online\2025-III\JB\mito-sales\mito-sales\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mitocode.controller" />
+      <recent name="com.mitocode.service.impl" />
+      <recent name="com.mitocode.service" />
+      <recent name="com.mitocode.repository" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UteqSalesApplication (1)">
+    <configuration name="CategoryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mito-sales" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mitocode.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mitocode.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.mitocode.controller.CategoryControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mito-sales" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mitocode.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mitocode.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mitocode.service.CategoryServiceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryServiceTest.deleteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mito-sales" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mitocode.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mitocode.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mitocode.service.CategoryServiceTest" />
+      <option name="METHOD_NAME" value="deleteTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryServiceTest.saveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mito-sales" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mitocode.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mitocode.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mitocode.service.CategoryServiceTest" />
+      <option name="METHOD_NAME" value="saveTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MitoSalesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mito-sales" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mitocode.MitoSalesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MitoSalesProd" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="prod" />
+      <module name="mito-sales" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mitocode.MitoSalesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UteqSalesApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="sales-security" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.uteq.UteqSalesApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uteq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UteqSalesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mito-sales" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.uteq.UteqSalesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="uteq-sales" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sales-security" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mitocode.UteqSalesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.CategoryControllerTest" />
+      <item itemvalue="JUnit.CategoryServiceTest" />
+      <item itemvalue="JUnit.CategoryServiceTest.deleteTest" />
+      <item itemvalue="JUnit.CategoryServiceTest.saveTest" />
+      <item itemvalue="Spring Boot.UteqSalesApplication" />
+      <item itemvalue="Spring Boot.MitoSalesApplication" />
+      <item itemvalue="Spring Boot.MitoSalesProd" />
+      <item itemvalue="Spring Boot.uteq-sales" />
+      <item itemvalue="Spring Boot.UteqSalesApplication (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.UteqSalesApplication (1)" />
+        <item itemvalue="JUnit.CategoryControllerTest" />
+        <item itemvalue="JUnit.CategoryServiceTest" />
+        <item itemvalue="JUnit.CategoryServiceTest.deleteTest" />
+        <item itemvalue="JUnit.CategoryServiceTest.saveTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="718a520a-cac0-43bc-826a-48abc570f8a8" name="Changes" comment="" />
+      <created>1750730423595</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750730423595</updated>
+      <workItem from="1750730424669" duration="3934000" />
+      <workItem from="1750884479550" duration="1000" />
+      <workItem from="1750895671643" duration="9587000" />
+      <workItem from="1751321900598" duration="143000" />
+      <workItem from="1751322052482" duration="11333000" />
+      <workItem from="1751413399885" duration="6000" />
+      <workItem from="1751500076735" duration="8948000" />
+      <workItem from="1751585385968" duration="10000" />
+      <workItem from="1751931744441" duration="8972000" />
+      <workItem from="1751988451369" duration="5000" />
+      <workItem from="1752105154410" duration="7179000" />
+      <workItem from="1752117072734" duration="3000" />
+      <workItem from="1752518434727" duration="2751000" />
+      <workItem from="1752522125941" duration="1141000" />
+      <workItem from="1752523290528" duration="4192000" />
+      <workItem from="1752536734900" duration="7935000" />
+      <workItem from="1754413472398" duration="245000" />
+      <workItem from="1754413724968" duration="146000" />
+      <workItem from="1754413874060" duration="363000" />
+      <workItem from="1754414428404" duration="603000" />
+      <workItem from="1755169870757" duration="8000" />
+      <workItem from="1755169891883" duration="655000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

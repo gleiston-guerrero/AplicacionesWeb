@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Perfil de Desarrollador</title>
+  <style>
+    /* Estilos para mejorar la presentación */
+
+    /* Para la página, o contenido a mostrar*/
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 10px;
+      line-height: 1.5;
+    }
+
+    /* Para los campos a mostrar al formulario*/
+    fieldset {
+      margin-bottom: 15px;
+      padding: 10px 15px;
+    }
+    /* Para los campos etiquetas de los campos*/
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    /* Una clase botones para ser aplicada */
+    .botones {
+      margin-top: 10px;
+    }
+
+    /* Para todos los controles (tags) button*/
+    button {
+      margin-right: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    /* Un identificador resultado que será manipulado para mostrar
+       los resultados de la evaluación*/
+    #resultado {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      min-height: 60px;
+    }
+
+    /* Una clase para las advertencias (color tonalidad rojo)*/
+    .advertencia {
+      color: #b30000;
+      font-weight: bold;
+    }
+
+    ul{
+      list-style-type: none;
+    }
+  </style>
+</head>
+<body>
+<h1>Evaluación de Perfil de Desarrollador</h1>
+
+<!-- Inicio del diseño del formulario-->
+<form id="formPerfil">
+  <!-- Conjunto de campos para el Nombre -->
+  <fieldset>
+    <legend>Datos del candidato</legend>
+    <label for="nombre">Nombre:</label>
+    <!-- El input tipo texto para el nombre-->
+    <input type="text" placeholder="[NOMBRE COMPLETO]" maxlength="50" size="50px" id="nombre" name="nombre" required>
+  </fieldset>
+
+  <!--  Conjunto de campos para las Habilidades técnicas (las 3) -->
+  <fieldset>
+    <legend>Habilidades técnicas</legend>
+    <!-- Los checkboxes para las habilidades-->
+    <label>
+      <input type="checkbox" id="habJs" name="habilidades" value="javascript">
+      JavaScript
+    </label>
+    <label>
+      <input type="checkbox" id="habDb" name="habilidades" value="db">
+      Bases de datos
+    </label>
+    <label>
+      <input type="checkbox" id="habUi" name="habilidades" value="ui">
+      Diseño UI
+    </label>
+  </fieldset>
+
+  <!--  Conjunto de campos para la Experiencia (barra de progreso) -->
+  <fieldset>
+    <legend>Experiencia en años</legend>
+    <label for="experiencia">
+      Experiencia (años):
+    </label>
+    <!-- El Slider (input tipo rango) para la experiencia -->
+    <input
+      type="range"
+      id="experiencia"
+      name="experiencia"
+      min="0"
+      max="10"
+      value="0"
+    >
+    <span id="valorExperiencia">0</span> años
+  </fieldset>
+
+  <!--  Conjunto de campos para el Rol objetivo -->
+  <fieldset>
+    <legend>Rol objetivo</legend>
+    <label for="rol">Rol al que aspiras:</label>
+    <!-- El select para los roles-->
+    <select id="rol" name="rol">
+      <option value="frontend">Frontend developer</option>
+      <option value="backend">Backend developer</option>
+      <option value="fullstack">Fullstack</option>
+      <option value="devops">DevOps</option>
+    </select>
+  </fieldset>
+
+  <!-- Botones -->
+  <div class="botones">
+    <button type="button" id="btnEvaluar">Evaluar</button>
+    <button type="button" id="btnLimpiar">Limpiar</button>
+  </div>
+</form>
+
+<!-- Área de resultado -->
+<div id="resultado">
+  <!-- Aquí se mostrará el resultado final -->
+</div>
+
+<script src="./js/practrica4.js"></script>
+</body>
+</html>

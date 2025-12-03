@@ -1,0 +1,334 @@
+/* =======================
+   Estilos generales
+   ======================= */
+
+/*
+ * Selector universal (*): aplica a TODOS los elementos del documento.
+*/
+* {
+  /* box-sizing: - border-box → El ancho total incluye padding y bordes (más fácil para maquetar).
+   *             - content-box → Valor por defecto (no recomendado para layouts modernos).*/
+  box-sizing: border-box;
+}
+
+/* Selectro de tipo o etiqueta. Se aplicará al Body de la página*/
+body {
+  /* font-family: Define fuentes a usar.
+   * Se ponen varias por compatibilidad, en orden de prioridad.
+   * Valores comunes: Arial, Verdana, system-ui, sans-serif, serif, monospace.*/
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* margin: Espacio exterior.
+   * margin: 0 elimina los márgenes automáticos del body.*/
+  margin: 0;
+  /* padding: Espacio interior.
+   * padding: 0 → sin relleno.*/
+  padding: 0;
+  /* background: color o imagen de fondo.
+   * Puede recibir: #hex (actual), rgb(245, 247, 251), rgba(245, 247, 251, 0.8),
+   * url("images/bg.jpg"), linear-gradient(to right, #fff, #ccc), repeat / no-repeat / cover
+   * / contain → se usan junto con imágenes de fondo.
+   * - color (nombres de color en inglés). Ej: white, black, red, blue, etc.
+   * - multiple backgrounds → varios fondos separados por comas.
+   * - none → sin fondo..*/
+  background: #f5f7fb;
+  /* color: color del texto.*/
+  color: #222;
+}
+
+/* Selector de clase. Se aplica a todos las etiquetas HTML cuyo atributo class
+ * tenga de valor "container" */
+.container {
+  /* max-width: Ancho máximo del contenedor.
+   * Puede usar las medidas absolutas o relativas: px, %, rem, vw, etc.*/
+  max-width: 960px;
+  /* margin: auto centra horizontalmente cuando hay ancho limitado.*/
+  margin: 2rem auto;
+  /* padding: relleno interno.
+   * padding: 0 1rem → eje vertical 0, horizontal 1rem.*/
+  padding: 0 1rem;
+}
+
+/* Selector de etiqueta. se aplica a todas las etiquetas h1.*/
+h1 {
+  /* text-align: Alineación del texto.
+   * Valores: left, right, center, justify. */
+  text-align: center;
+  /* margin-bottom: espacio debajo del h1. */
+  margin-bottom: 1.5rem;
+}
+
+
+/* ==================================
+ *    Selectores para las Tarjetas
+ * ================================== */
+
+/*Selector de clase. Se aplica a todos las etiquetas HTML cuyo atributo class
+ * tenga de valor "card" */
+.card {
+  /* background: fondo del elemento. */
+  background: #fff;
+  /* padding: espacio interno.*/
+  padding: 1.5rem;
+  /* margin-bottom: espacio entre tarjetas.*/
+  margin-bottom: 1.5rem;
+  /* border-radius: redondea las esquinas.
+   * Acepta medidas relativas o absolutas px, %, rem.*/
+  border-radius: 0.75rem;
+  /* box-shadow: sombra alrededor del elemento.
+   * Formato: offsetX: Desplazamiento horizontal de la sombra. offsetY: Desplazamiento vertical de la sombra
+    blur: Nivel de desenfoque. colorRGBA: Color de la sombra (color con transparencia) */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Selector descendiente (descendant selector) formado por dos selectores básicos combinados:
+ * - Selector de clase, y selector de etiqueta:
+ * - Se aplica a todos los h2 que se encuentren dentro (en cualquier nivel) de cualquier elemento
+ *   cuyo valor de class sea "card"*/
+.card h2 {
+  /* margin-top: 0 → elimina espacio superior del h2 dentro de la tarjeta.*/
+  margin-top: 0;
+  /*margin-bottom: espacio inferior.*/
+  margin-bottom: 1rem;
+}
+
+/* =============================================
+      Estilos o selectores para el Formulario
+   ============================================= */
+
+/* Nombres tipo Bootstrap
+ * Selector de clase.
+ * Se aplica a cualquier TAG HTML como valor de su atributo class */
+.form-group {
+  /* margin-bottom: espacio entre grupos de formulario. */
+  margin-bottom: 1rem;
+}
+
+/* Selector de tipo o etiqueta. Se aplica a todos los label del documento.*/
+label {
+  /* display: - block → ocupa toda la línea.
+              - inline-block → permite ancho y alto.
+              - inline → no permite ancho/alto. */
+  display: block;
+  /* Separación entre etiqueta y el input. */
+  margin-bottom: 0.25rem;
+}
+
+/* Selectores de atributo combinado con un selector de tipo o etiqueta.
+ * Las atributos css (características) serán para todos los input cuyo atributo typo tenga de calor
+ * "text" o "number". A ambos se le aplicará esos atributos */
+input[type="text"],
+input[type="number"] {
+  /* width: 100% → ocupa todo el ancho del contenedor.*/
+  width: 100%;
+  /* padding: relleno interno del input. */
+  padding: 0.5rem 0.75rem;
+  /*  border-radius: esquinas redondeadas.*/
+  border-radius: 0.5rem;
+  /* border: borde del input. */
+  border: 1px solid #ccc;
+  /* font-size: tamaño de letra.
+   * Acepta medidas absolutas o relativas px, rem, em.*/
+  font-size: 1rem;
+}
+/* Selectores compuestos que combinan tres tipos de selectores diferentes:
+ * - De tipo o de etiqueta,
+ * - Selector de atributo (Attribute Selector), y
+ * - Pseudo-clase (Pseudo-class Selector) :focus (evento), :hover → al pasar el mouse,
+ *   :active → al presionar, :checked → checkbox o radio seleccionado, :disable*/
+input[type="text"]:focus,
+input[type="number"]:focus {
+  /* outline: línea de enfoque predeterminada.  → se quita. */
+  outline: none;
+  /* border-color: color del borde cuando está enfocado. */
+  border-color: #4a63e7;
+  /* box-shadow: efecto de resplandor. */
+  box-shadow: 0 0 0 2px rgba(74, 99, 231, 0.15);
+}
+
+/* Selector de etiqueta. Se aplicará a todas las etiquetas HTML "fieldset" */
+fieldset {
+  /* border: línea alrededor de un grupo de campos. */
+  border: 1px solid #ccc;
+  /* border-radius: esquinas redondeadas del fieldset. */
+  border-radius: 0.5rem;
+  /* padding: espacio interno. */
+  padding: 0.75rem 1rem;
+  /* margin-bottom: separación inferior. */
+  margin-bottom: 1rem;
+}
+
+/* Selector de etiqueta. Se aplicará a todas las etiquetas HTML "legend" */
+legend {
+  /* padding: espacio interno alrededor del título del fieldset.*/
+  padding: 0 0.25rem;
+  /* font-weight: - 400 normal
+                  - 600 semibold
+                  - 700 bold */
+  font-weight: 600;
+}
+
+/* Selector de clase. Se aplica a cualquier TAG HTML como valor de su atributo class */
+.inline {
+  /* margin-right: separación entre opciones inline. */
+  margin-right: 1rem;
+}
+
+/* Selector descendiente (descendant selector) formado por dos selectores básicos combinados:
+ * - Selector de clase, y selector de etiqueta:
+ * - Se aplica a todos los TAGs HTML input que se encuentren dentro (en cualquier nivel) de
+ *   cualquier elemento cuyo valor de class sea "inline"*/
+.inline input {
+  /* Separación entre radio/checkbox y el texto.*/
+  margin-right: 0.25rem;
+}
+
+
+/* =================================
+      Selectores para los Botones
+   ================================= */
+
+/* Selector de clase. Se aplica a cualquier TAG HTML como valor de su atributo class */
+.form-actions {
+  /* display: flex → activa el modelo flexbox.
+   * El modelo Flexbox (Flexible Box Layout) es un sistema de diseño moderno de CSS creado
+   * para organizar y alinear elementos dentro de un contenedor de manera flexible, resizable y
+   * responsiva, sin necesidad de flotadores (float), tablas ni trucos antiguos.*/
+  display: flex; /* Flexbox cambia un contenedor normal en un contenedor flexible,
+                  * y todos los elementos dentro de él se convierten en elementos flexibles
+                  * ("flex items").*/
+  /* gap: separación ENTRE los elementos en flexbox. */
+  gap: 0.75rem;
+  /* margin-top / margin-bottom: espacios verticales. (márgenes superior e inferior */
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Selector de etiqueta, se aplica automáticamente a todas las etiquetas button */
+button {
+  /* border: none → elimina bordes por defecto. */
+  border: none;
+  /* border-radius: esquinas del botón. */
+  border-radius: 0.5rem;
+  /* padding: relleno interno del botón. */
+  padding: 0.5rem 1.25rem;
+  /* font-size: tamaño de letra. */
+  font-size: 0.95rem;
+  /* cursor: pointer → cambia el cursor a mano al pasar por encima. */
+  cursor: pointer;
+  /* transition: animación suave.
+   * background → color de fondo
+   * transform → efectos (escala, rotación) */
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* Selector de identificador: Botón Agregar (id="btnAgregar") */
+#btnAgregar {
+  /* background: color del fondo. */
+  background: #4a63e7;
+  /* color del texto */
+  color: #fff;
+}
+
+/* Selectores compuestos que combinan dos tipos de selectores diferentes:
+ * - De identificador,,
+ * - Pseudo-clase (Pseudo-class Selector) :hover (evento), :hover → al pasar el mouse
+ * Se aplica cuando el mouse esté sobre el TAG HTML cuyo id="btnAgregar"*/
+#btnAgregar:hover {
+  background: #394dcc;
+}
+
+/* Botón Limpiar */
+/* Selector de identificador: Botón Agregar (id="btnLimpiar") */
+#btnLimpiar {
+  background: #e4e6ef;
+}
+
+/* Selectores compuestos que combinan dos tipos de selectores diferentes:
+ * - De identificador,,
+ * - Pseudo-clase (Pseudo-class Selector) :hover (evento), :hover → al pasar el mouse
+ * Se aplica cuando el mouse esté sobre el TAG HTML cuyo id="btnLimpiar"*/
+
+#btnLimpiar:hover {
+  background: #d3d5e5;
+}
+
+/* Selectores compuestos que combinan dos tipos de selectores diferentes:
+ * - De etiqueta o tipo,
+ * - Pseudo-clase (Pseudo-class Selector) :active (evento), :active → cuando el elemento HTML
+ *   se encuentra activo.
+ * Se aplica cuando el elemento HTML button esté activo. :active ocurre en el momento exacto
+ * en que el usuario mantiene el clic presionado sobre un elemento (generalmente botones o enlaces),
+ * en los input cuando el cursor del mouse está dentro del control.*/
+button:active {
+  /* transform: escala cuando se presiona. */
+  transform: scale(0.97);
+}
+
+
+/* ===============================
+     Selectores para los Errores
+   =============================== */
+
+.required {
+  /* color: rojo para los asteriscos de campos requeridos. */
+  color: #e02424;
+}
+
+.errores {
+  /* margin-top: separación arriba del contenedor de errores. */
+  margin-top: 0.5rem;
+  /* color del texto de error */
+  color: #e02424;
+  /* tamaño de letra */
+  font-size: 0.9rem;
+}
+
+.errores ul {
+  /* márgenes */
+  margin: 0.25rem 0 0;
+  /* padding-left: separación para la lista */
+  padding-left: 1.2rem;
+}
+
+
+/* =======================================
+      Selectores para la Tabla de datos
+   ======================================= */
+
+.table-wrapper {
+  /* overflow-x: auto → permite scroll horizontal cuando la tabla es muy ancha.
+   * Puede tomar los valores: hidden, scroll, visible. */
+  overflow-x: auto;
+}
+
+table {
+  /* width: 100% → tabla ocupa todo el ancho disponible. */
+  width: 100%;
+  /* border-collapse: - collapse → bordes se unifican
+                      - separate → bordes por separado */
+  border-collapse: collapse;
+  /* tamaño de texto de la tabla */
+  font-size: 0.95rem;
+}
+
+thead {
+  /* Fondo del encabezado. */
+  background: #4a63e7;
+  /* Texto blanco */
+  color: #fff;
+}
+
+th, td {
+  /* padding: espacio interior de las celdas. */
+  padding: 0.5rem 0.75rem;
+  /* border-bottom: borde inferior de cada fila. */
+  border-bottom: 1px solid #e0e2ee;
+  /* text-align: Alinea el texto en el espacio en el que se encuentra.
+   * Puede tomar los valores: left, center, right, justify. */
+  text-align: left;
+}
+
+/* nth-child(even) → estilos a filas pares: 2, 4, 6, 8... */
+tbody tr:nth-child(even) {
+  background: #f3f4fb;
+}

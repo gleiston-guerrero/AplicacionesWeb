@@ -26,11 +26,9 @@ class Docente extends Persona {
 }
 
 // ======== Estado de la aplicación ========
-
 const personas = []; // aquí se guardan las instancias
 
 // ======== Referencias a elementos del DOM ========
-
 const form = document.getElementById("personaForm");
 const nombreInput = document.getElementById("nombre");
 const edadInput = document.getElementById("edad");
@@ -148,6 +146,7 @@ form.addEventListener("submit", function (event) {
   const matricula = matriculaInput.value.trim();
 
   let persona;
+
   if (rol === "estudiante") {
     persona = new Estudiante(nombre, edad, matricula);
   } else {
@@ -181,6 +180,7 @@ function mostrarErrores(errores) {
 // Limpiar errores cuando se pulsa "Limpiar"
 btnLimpiar.addEventListener("click", () => {
   erroresDiv.innerHTML = "";
+  form.reset();
   actualizarVisibilidadMatricula();
 });
 

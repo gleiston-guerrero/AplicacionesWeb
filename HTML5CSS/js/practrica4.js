@@ -29,17 +29,18 @@ function evaluarPerfil() {
   const habDb = document.getElementById("habDb").checked;
   const habUi = document.getElementById("habUi").checked;
   const experiencia =
-    parseInt( document.getElementById("experiencia").value, 10 );
+    parseInt(document.getElementById("experiencia").value, 10 );
+  //const experiencia = document.getElementById("experiencia").value;
   const rol = document.getElementById("rol").value;
 
   // Caja para la salida. Puede ser un textarea como Salida
   const resultadoDiv = document.getElementById("resultado");
+  // Limpiamos el área de resultado
+  resultadoDiv.innerHTML = "";
 
   //Quitamos los espacios en blando
   const nombre = nombreInput.value.trim();
 
-  // Limpiamos el área de resultado
-  resultadoDiv.innerHTML = "";
 
   /*
    * Validación de nombre. Si no ha ingresado algo en la caja de texto.
@@ -53,13 +54,20 @@ function evaluarPerfil() {
 
   // Condicional: sin habilidades y menos de un año de experiencia
   if (!habJs && !habDb && !habUi && experiencia < 1) {
-    resultadoDiv.innerHTML = `
+    resultadoDiv.innerHTML += `
       <p class="advertencia">
-        Advertencia: no has seleccionado habilidades y tienes menos de un año de experiencia.
+        Advertencia: no has seleccionado habilidades y no tienes experiencia.<br />
         Es recomendable adquirir conocimientos básicos antes de postular a un rol específico.
       </p>
     `;
     return; // No sigue evaluando el perfil
+  }
+
+  const miRol = document.getElementById("rol").value;
+  if (miRol === ""){
+    resultadoDiv.innerHTML +=
+      '<p class="advertencia">Por favor, Seleccione uno de los objetivos.</p>';
+    return;
   }
 
   // Condicional: Suma de puntaje según habilidades y años de experiencia
@@ -181,6 +189,6 @@ function limpiarFormulario() {
 
   formulario.reset();
   resultadoDiv.innerHTML = "";
-  experienciaInput.value = 0;
-  valorExperienciaSpan.textContent = "0";
+  //experienciaInput.value = 0;
+  valorExperienciaSpan.textContent = experienciaInput.value;
 }

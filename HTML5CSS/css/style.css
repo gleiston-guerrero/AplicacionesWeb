@@ -76,6 +76,16 @@ fieldset {
  * Allow only vertical resizing of textareas.
  */
 
+table{
+  border-collapse: collapse;
+  background-color: #b3d4fc;
+}
+
+td,th{
+  border: #0f172a dotted 2px;
+  padding: 5px;
+}
+
 textarea {
   resize: vertical;
 }

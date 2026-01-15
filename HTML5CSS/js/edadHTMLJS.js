@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  document.getElementById("formEdad").addEventListener("submit", function (e) {
-    e.preventDefault(); // evita recargar la página
+  document.getElementById("formEdad").addEventListener(
+    "submit", function (e) {
+
+      e.preventDefault(); // evita recargar la página
 
     const fechaNac = document.getElementById("fechaNac").value;
 

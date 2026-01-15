@@ -69,7 +69,8 @@
     <legend>Datos del candidato</legend>
     <label for="nombre">Nombre:</label>
     <!-- El input tipo texto para el nombre-->
-    <input type="text" placeholder="[NOMBRE COMPLETO]" maxlength="50" size="50px" id="nombre" name="nombre" required>
+    <input type="text" placeholder="[NOMBRE COMPLETO]" maxlength="50" size="50px"
+           id="nombre" name="nombre" required value="Gleiston">
   </fieldset>
 
   <!--  Conjunto de campos para las Habilidades técnicas (las 3) -->
@@ -103,9 +104,9 @@
       name="experiencia"
       min="0"
       max="10"
-      value="0"
+      value="5"
     >
-    <span id="valorExperiencia">0</span> años
+    <span id="valorExperiencia">5</span> años
   </fieldset>
 
   <!--  Conjunto de campos para el Rol objetivo -->
@@ -113,7 +114,8 @@
     <legend>Rol objetivo</legend>
     <label for="rol">Rol al que aspiras:</label>
     <!-- El select para los roles-->
-    <select id="rol" name="rol">
+    <select id="rol" name="rol" required>
+      <option value=""><span style="color: #555555">[Escoja uno de los objetivos]</span></option>
       <option value="frontend">Frontend developer</option>
       <option value="backend">Backend developer</option>
       <option value="fullstack">Fullstack</option>

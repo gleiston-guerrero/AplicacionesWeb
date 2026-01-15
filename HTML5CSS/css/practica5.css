@@ -19,7 +19,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   /* margin: Espacio exterior.
    * margin: 0 elimina los márgenes automáticos del body.*/
-  margin: 0;
+  margin: 0 auto;
   /* padding: Espacio interior.
    * padding: 0 → sin relleno.*/
   padding: 0;
@@ -269,7 +269,7 @@ button:active {
      Selectores para los Errores
    =============================== */
 
-.required {
+.required, .errores {
   /* color: rojo para los asteriscos de campos requeridos. */
   color: #e02424;
 }
@@ -277,8 +277,6 @@ button:active {
 .errores {
   /* margin-top: separación arriba del contenedor de errores. */
   margin-top: 0.5rem;
-  /* color del texto de error */
-  color: #e02424;
   /* tamaño de letra */
   font-size: 0.9rem;
 }
